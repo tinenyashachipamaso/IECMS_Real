@@ -1,21 +1,16 @@
 {
-  "name": "iecms_real",
+  "name": "iecms-virtual-court",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "ejs": "^7.0.1",
-    "express": "^5.2.1",
-    "nodemailer": "^10.0.14",
-    "peer": "^1.0.2",
-    "socket.io": "^4.8.4",
-    "uuid": "^14.0.2"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "nodemailer": "^6.9.7",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
   }
 }
