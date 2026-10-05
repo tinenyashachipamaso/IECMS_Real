@@ -1,0 +1,5 @@
+body { background: #1a1a1a; color: #d4af37; font-family: Arial; }
+.court-container { display: grid; grid-template-columns: 4fr 1fr; height: 90vh; }
+#main-speaker { border: 3px solid #d4af37; background: #000; }
+#sidebar { display: flex; flex-direction: column; }
+button { background: #d4af37; border: none; padding: 10px; cursor: pointer; }

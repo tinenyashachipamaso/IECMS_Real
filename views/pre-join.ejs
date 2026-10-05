@@ -1,0 +1,8 @@
+<video id="preview" autoplay muted></video>
+<button onclick="toggleMic()">Mic</button>
+<button onclick="toggleCam()">Cam</button>
+<a href="/room/<%= roomId %>"><button>Join Session</button></a>
+
+<script>
+    navigator.mediaDevices.getUserMedia({video: true, audio: true}).then(s => document.getElementById('preview').srcObject = s);
+</script>
