@@ -1,8 +1,5 @@
+<h2>Welcome, <%= user %></h2>
 <form action="/create-session" method="POST">
     <input name="caseNumber" placeholder="Case Number" required>
-    <input name="judge" placeholder="Judge Presiding" required>
-    <input name="participants" type="number" max="5" placeholder="Participants (max 5)">
-    <input name="date" type="date">
-    <button type="submit">Create Virtual Session</button>
+    <button type="submit">Initialize Virtual Court</button>
 </form>
-<a href="/logout">Logout</a>

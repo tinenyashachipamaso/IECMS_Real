@@ -1,13 +1,15 @@
 const socket = io('/');
-// Logic for camera/mic control
-let localStream;
-async function init() {
-    localStream = await navigator.mediaDevices.getUserMedia({video: true, audio: true});
+const myVideo = document.createElement('video');
+navigator.mediaDevices.getUserMedia({video: true, audio: true}).then(stream => {
+    myVideo.srcObject = stream;
+    myVideo.play();
+    document.getElementById('speaker-video').srcObject = stream;
+});
+
+function toggleMic() { /* logic */ }
+function toggleCam() { /* logic */ }
+
+function endSession() {
+    alert("Moderator ended the session.");
+    window.location.href = '/dashboard';
 }
-function toggleMic() {
-    localStream.getAudioTracks()[0].enabled = !localStream.getAudioTracks()[0].enabled;
-}
-function toggleCam() {
-    localStream.getVideoTracks()[0].enabled = !localStream.getVideoTracks()[0].enabled;
-}
-init();

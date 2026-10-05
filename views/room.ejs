@@ -1,6 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 <div class="court-container">
-    <div id="main-speaker"></div>
-    <div id="sidebar"></div>
+    <div id="main-stage">
+        <video id="speaker-video" autoplay playsinline></video>
+        <div class="controls">
+            <button onclick="toggleMic()">🎤 Mic</button>
+            <button onclick="toggleCam()">📷 Cam</button>
+            <% if (session && session.moderator) { %>
+                <button style="background:red" onclick="endSession()">End Meeting (Moderator)</button>
+            <% } %>
+        </div>
+    </div>
+    <div id="sidebar">
+        <h3>Participants</h3>
+        <div id="participant-list"></div>
+    </div>
 </div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/script.js"></script>
+</body>
+</html>

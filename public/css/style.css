@@ -1,5 +1,6 @@
-body { background: #1a1a1a; color: #d4af37; font-family: Arial; }
-.court-container { display: grid; grid-template-columns: 4fr 1fr; height: 90vh; }
-#main-speaker { border: 3px solid #d4af37; background: #000; }
-#sidebar { display: flex; flex-direction: column; }
-button { background: #d4af37; border: none; padding: 10px; cursor: pointer; }
+body { background: #f3f2f1; font-family: 'Segoe UI', sans-serif; margin: 0; }
+.court-container { display: grid; grid-template-columns: 1fr 300px; height: 100vh; }
+#main-stage { background: #000; position: relative; display: flex; align-items: center; justify-content: center; }
+#sidebar { background: #fff; border-left: 1px solid #ddd; padding: 20px; }
+.controls { position: absolute; bottom: 20px; display: flex; gap: 10px; background: #333; padding: 10px; border-radius: 20px; }
+button { padding: 10px 20px; cursor: pointer; border-radius: 5px; border: none; background: #0078d4; color: white; }
